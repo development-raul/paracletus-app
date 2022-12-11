@@ -20,4 +20,6 @@ build/
 
 .env
 
+db-data/
+
 

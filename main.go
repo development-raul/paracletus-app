@@ -2,6 +2,7 @@ package main
 
 import (
 	"github.com/development-raul/paracletus"
+	"paracletus-app/data"
 	"paracletus-app/handlers"
 )
 
@@ -11,6 +12,7 @@ import (
 type application struct {
 	App      *paracletus.Paracletus
 	Handlers *handlers.Handlers
+	Models   data.Models
 }
 
 func main() {

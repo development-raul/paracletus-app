@@ -4,10 +4,12 @@ import (
 	"github.com/CloudyKit/jet/v6"
 	"github.com/development-raul/paracletus"
 	"net/http"
+	"paracletus-app/data"
 )
 
 type Handlers struct {
-	App *paracletus.Paracletus
+	App    *paracletus.Paracletus
+	Models data.Models
 }
 
 func (h *Handlers) Home(w http.ResponseWriter, r *http.Request) {

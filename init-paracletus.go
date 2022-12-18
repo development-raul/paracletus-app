@@ -4,6 +4,7 @@ import (
 	"github.com/development-raul/paracletus"
 	"log"
 	"os"
+	"paracletus-app/data"
 	"paracletus-app/handlers"
 )
 
@@ -35,6 +36,9 @@ func initApplication() *application {
 
 	// add our application routes to the default Paracletus routes
 	app.App.Routes = app.routes()
+
+	app.Models = data.New(app.App.DB.Pool)
+	myHandlers.Models = app.Models
 
 	return app
 }

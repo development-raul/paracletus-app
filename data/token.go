@@ -13,7 +13,7 @@ import (
 
 // Token is the type for a token
 type Token struct {
-	ID        int       `db:"id" json:"id"`
+	ID        int       `db:"id,omitempty" json:"id"`
 	UserID    int       `db:"user_id" json:"user_id"`
 	FirstName string    `db:"first_name" json:"first_name"`
 	Email     string    `db:"email" json:"email"`
